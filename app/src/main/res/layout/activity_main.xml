@@ -6,132 +6,126 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout1_text"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/input_layout_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/first_number"
+        app:counterOverflowTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:hint="@string/first_number"
-        app:counterOverflowTextColor="@color/black">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_first_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
-
-
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/input_layout2_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="150dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/second_number"
+        app:counterOverflowTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:hint="@string/second_number"
-        app:counterOverflowTextColor="@color/black">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_second_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_view_plus"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="130dp"
         android:src="@drawable/plus_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_layout2_text"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="150dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/input_layout2_text" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_view_mines"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/mines_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_layout2_text"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="140dp"/>
+        tools:ignore="ImageContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_view_multiplied"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="130dp"
         android:src="@drawable/multiplied_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_plus"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="150dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/image_view_plus" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_view_divided"
-        android:layout_width="99dp"
-        android:layout_height="99dp"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/divided_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_plus"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="140dp"/>
+        tools:ignore="ImageContrastCheck" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image_view_equals"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:src="@drawable/equals_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_view_divided"
-        android:layout_marginTop="20dp"/>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/image_view_gradient"
-        android:layout_width="match_parent"
-        android:layout_height="80sp"
+        android:id="@+id/image_view_note"
+        android:layout_width="260dp"
+        android:layout_height="260sp"
         android:layout_margin="20dp"
-        android:layout_marginTop="1640dp"
-        android:background="@drawable/gradient_button"
+        android:src="@drawable/answer_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_view_equals" />
+        app:layout_constraintTop_toBottomOf="@id/image_view_multiplied" />
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="0"
-        android:textSize="44sp"
-        android:textColor="@color/black"
         android:layout_margin="20dp"
-        android:layout_marginTop="1640dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_note"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_view_equals"
-        />
-
+        app:layout_constraintTop_toTopOf="@+id/image_view_note"
+        app:layout_constraintVertical_bias="0.45"
+        tools:ignore="MissingConstraints"
+        tools:text="12.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,13 +13,21 @@
         android:theme="@style/Theme.MyCalculator"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""
+                android:theme= "@style/splash"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity">
+
 
             <meta-data
                 android:name="android.app.lib_name"
